@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE experiments SYSTEM "behaviorspace.dtd">
+<experiments>
+  <experiment name="v3w-exp3" repetitions="1" runMetricsEveryStep="true">
+    <setup>setup</setup>
+    <go>go</go>
+    <timeLimit steps="10000"/>
+    <metric>%infected</metric>
+    <enumeratedValueSet variable="mobility-prob">
+      <value value="0.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="agent-healing-prob">
+      <value value="0.15"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="init-contamination-ratio">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="init-obstacles-ratio">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="direct-infection-weight">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-contamination-prob">
+      <value value="0.15"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="patch-heal-prob" first="0" step="0.01" last="0.5"/>
+    <enumeratedValueSet variable="population">
+      <value value="250"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="init-infected-ratio">
+      <value value="5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-infection-weight">
+      <value value="0.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="infection-probability">
+      <value value="1"/>
+    </enumeratedValueSet>
+  </experiment>
+</experiments>
