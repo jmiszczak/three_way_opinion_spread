@@ -124,7 +124,7 @@ end
 
 ;; get infected by contact with contaminated patch
 to get-infected-by-contamination
-  if contaminated? and random-float 1 < patch-infection-weight * infection-probability
+  if contaminated? and random-float 1 < patch-infection-probability
   [
     get-sick
   ]
@@ -134,7 +134,7 @@ end
 to get-infected-by-contact
   if (count other turtles-here with [ sick? ])  > 0
   [
-    if random-float 1 < direct-infection-weight * infection-probability
+    if random-float 1 < direct-infection-probability
     [
       get-sick
     ]
@@ -145,7 +145,7 @@ end
 to get-infected-by-proximity
   if (count other (turtles-on neighbors4) with [ sick? ]) > 0
   [
-    if random-float 1 < indirect-infection-weight * infection-probability
+    if random-float 1 < indirect-infection-probability
     [
       get-sick
     ]
@@ -184,10 +184,6 @@ to get-healthy
   set sick-time 0
 end
 ;;
-
-to-report indirect-infection-weight
-report 1 - (direct-infection-weight + patch-infection-weight)
-end
 
 ;; only sick agents are immune
 to-report immune?
@@ -397,9 +393,9 @@ PENS
 
 SLIDER
 15
-570
+550
 270
-603
+583
 mobility-prob
 mobility-prob
 0
@@ -412,9 +408,9 @@ HORIZONTAL
 
 SLIDER
 15
-620
+600
 270
-653
+633
 patch-contamination-prob
 patch-contamination-prob
 0
@@ -430,7 +426,7 @@ TEXTBOX
 325
 270
 356
-Weights of the spread channels
+Probabilities for the channels
 14
 0.0
 0
@@ -448,9 +444,9 @@ MONITOR
 
 TEXTBOX
 20
-545
+525
 315
-576
+556
 Parameters of agents and patches
 14
 0.0
@@ -461,8 +457,8 @@ SLIDER
 450
 265
 483
-direct-infection-weight
-direct-infection-weight
+direct-infection-probability
+direct-infection-probability
 0
 1
 0.33
@@ -476,8 +472,8 @@ SLIDER
 400
 265
 433
-patch-infection-weight
-patch-infection-weight
+patch-infection-probability
+patch-infection-probability
 0
 1
 0.33
@@ -488,9 +484,9 @@ HORIZONTAL
 
 SLIDER
 15
-675
+655
 270
-708
+688
 agent-healing-prob
 agent-healing-prob
 0
@@ -503,9 +499,9 @@ HORIZONTAL
 
 SLIDER
 15
-720
+700
 270
-753
+733
 patch-heal-prob
 patch-heal-prob
 0
@@ -539,8 +535,8 @@ SLIDER
 350
 265
 383
-infection-probability
-infection-probability
+indirect-infection-probability
+indirect-infection-probability
 0
 1
 1.0
@@ -571,21 +567,12 @@ mean-total-sick-time
 1
 11
 
-MONITOR
-15
-495
-260
-540
-indirect-infection-weight
-indirect-infection-weight
-2
-1
-11
-
 @#$#@#$#@
 ## WHAT IS IT?
 
 This model incorporates three mechanisms shaping the dynamics of opinion formation, which mimics the dynamics of the virus spreading in the population. There are three methods of getting infected (or convinced) - direct contact, indirect contact, and contact with ``contaminated'' elements.
+
+One should note that all three channels considered in the described model can be interpreted in the physical as well as digital environment. In the first case the direct communication is interpreted as face to face interaction, the second channel is interpreted as propagation via unintentional information gain, and the contaminated material is interpreted as a physical form of information distribution in the form of leaflets and posters. On the other hand, if we consider the propagation of information in the digital environment, the firs channel is interpreted as direct discussion via email or instant messengers, the third channel can be understood as a information obtained using mailing lists and mass mail distribution, and the third channel represent published content and comments published in the community. The main difference between the second and the third channel is that the last one has a potential for long-term impact on the opinion dynamics.
 
 ## HOW IT WORKS
 
@@ -595,11 +582,11 @@ Additionally, an infected agent can contaminate visited patches. This mechanism 
 
 ## HOW TO USE IT
 
-The user interface is divided into three sections. 
+The parameters for controlling the model are divided into three sections. 
 
 In the setup section one can fix the population (slider *population*), percentage of patches which are considered as unavailable for agents (slider *init-obstacles-ratio*), as well as initial percentage of contaminated patches (slider *init-contamination-ratio*) and the initial number of infected agents (slider *init-infected-ratio*).
 
-The second section - *Weights of the spread channels* - includes parameter of the opinion (or virus) spread. Slider *infection-probability* can be used to control the overall probability of getting infected. Additionally, sliders *direct-infection-weight* and *patch-infection-weight* can be used to change the probabilities of getting infected during the direct contact and via contact with a contaminated patch. Monitor *indirect-infection-weight* displays the current value of probability assigned to the second channel - indirect contact - and it is calculated as the complement of the other two channels.
+The second section - *Probabilities of the channels* - includes parameter of the opinion (or virus) spread. Slider *direct-infection-probability*, *indirect-infection-probability*, and *patch-infection-probability* can be used to change the probabilities of getting infected during the direct contact, the indirect contact, and via contact with a contaminated patch, respectively. The values of these probabilities are set independently.
 
 The third section - *Parameters of agents and patches* - included parameters controling healing and mobility. In particular,
 
@@ -622,7 +609,9 @@ One of the possible extension of the model can be made by introducing two or mor
 
 ## NETLOGO FEATURES
 
-The model does not include. Each agent can in one of two states - sick, represented by colour *red* and healthy, represented by colour *white*. Similarly, each patch can be contaminated (pink) or clean (white). Black patches represent obstacles and are fixed during the setup phase.
+The model does not include the notion of the second opinion . Each agent can in one of two states - sick or convinced, represented by colour *red* and healthy or having no opinion, represented by colour *white*. Similarly, each patch can be contaminated (pink) or clean (white). Black patches represent obstacles and are fixed during the setup phase.
+
+There is also no notopn of a gossip of false opinion, whcih could be interpreted as information obtained accidentaly. For the purpose of modelling this kind of process a second channel could be used.
 
 ## RELATED MODELS
 
