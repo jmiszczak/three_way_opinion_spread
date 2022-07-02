@@ -9,8 +9,6 @@
     <metric>%infected</metric>
     <steppedValueSet variable="mobility-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
@@ -19,9 +17,13 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0.25"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.05" last="0.75"/>
     <steppedValueSet variable="patch-contamination-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="patch-heal-prob">
       <value value="0.05"/>
@@ -32,7 +34,6 @@
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="patch-infection-probability" first="0" step="0.05" last="0.75"/>
   </experiment>
 
   <!-- exp1x-mobility-patch_cont-patch_infect -->
@@ -43,8 +44,6 @@
     <metric>%infected</metric>
     <steppedValueSet variable="mobility-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
@@ -53,9 +52,13 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0.25"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.15" last="0.75"/>
     <steppedValueSet variable="patch-contamination-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="patch-heal-prob">
       <value value="0.15"/>
@@ -66,7 +69,6 @@
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="patch-infection-probability" first="0" step="0.15" last="0.75"/>
   </experiment>
 
    <!-- exp2-mobility-patch_cont-patch_infect -->
@@ -77,8 +79,6 @@
     <metric>%infected</metric>
     <steppedValueSet variable="mobility-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
@@ -87,9 +87,13 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.05" last="0.75"/>
     <steppedValueSet variable="patch-contamination-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="patch-heal-prob">
       <value value="0.05"/>
@@ -100,7 +104,6 @@
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="patch-infection-probability" first="0" step="0.05" last="0.75"/>
   </experiment>
 
   <!-- exp2x-mobility-patch_cont-patch_infect -->
@@ -111,8 +114,6 @@
     <metric>%infected</metric>
     <steppedValueSet variable="mobility-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
@@ -121,9 +122,13 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0"/>
     </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.15" last="0.75"/>
     <steppedValueSet variable="patch-contamination-prob" first="0" step="0.05" last="1"/>
     <enumeratedValueSet variable="patch-heal-prob">
       <value value="0.15"/>
@@ -134,7 +139,6 @@
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="patch-infection-probability" first="0" step="0.15" last="0.75"/>
   </experiment>
 
   <!-- experiemnts 3 to 6 are used to provide examples of realizations -->
@@ -149,8 +153,6 @@
       <value value="0.5"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
@@ -159,7 +161,13 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
+      <value value="0.333"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.333"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-infection-prob">
       <value value="0.333"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="patch-contamination-prob">
@@ -171,9 +179,6 @@
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="patch-infection-probability">
-      <value value="0.333"/>
     </enumeratedValueSet>
   </experiment>
 
@@ -194,15 +199,19 @@
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
     </enumeratedValueSet>    <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
-      <value value="0.15"/>
       <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0.25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.25"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-infection-prob">
+      <value value="0.5"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="patch-contamination-prob">
       <value value="0.15"/>
@@ -214,9 +223,7 @@
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="patch-infection-probability">
-      <value value="0.5"/>
-    </enumeratedValueSet>
+
   </experiment>
 
   <!-- exp5-realization_non-eq_weights -->
@@ -229,9 +236,7 @@
       <value value="0.5"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
       <value value="0.15"/>
-      <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
@@ -239,8 +244,14 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0.66"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-infection-prob">
+      <value value="0.34"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="patch-contamination-prob">
       <value value="0.15"/>
@@ -251,9 +262,6 @@
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="patch-infection-probability">
-      <value value="0.34"/>
     </enumeratedValueSet>
   </experiment>
 
@@ -267,9 +275,7 @@
       <value value="0.5"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
       <value value="0.15"/>
-      <value value="0.25"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
@@ -277,8 +283,14 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-probability">
+    <enumeratedValueSet variable="direct-infection-prob">
       <value value="0.66"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="indirect-infection-prob">
+      <value value="0.34"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="patch-infection-prob">
+      <value value="0"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="patch-contamination-prob">
       <value value="0.15"/>
@@ -289,9 +301,6 @@
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-infected-ratio">
       <value value="5"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="patch-infection-probability">
-      <value value="0"/>
     </enumeratedValueSet>
   </experiment>
 </experiments>

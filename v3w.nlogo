@@ -124,7 +124,7 @@ end
 
 ;; get infected by contact with contaminated patch
 to get-infected-by-contamination
-  if contaminated? and random-float 1 < patch-infection-probability
+  if contaminated? and random-float 1 < patch-infection-prob
   [
     get-sick
   ]
@@ -134,7 +134,7 @@ end
 to get-infected-by-contact
   if (count other turtles-here with [ sick? ])  > 0
   [
-    if random-float 1 < direct-infection-probability
+    if random-float 1 < direct-infection-prob
     [
       get-sick
     ]
@@ -145,7 +145,7 @@ end
 to get-infected-by-proximity
   if (count other (turtles-on neighbors4) with [ sick? ]) > 0
   [
-    if random-float 1 < indirect-infection-probability
+    if random-float 1 < indirect-infection-prob
     [
       get-sick
     ]
@@ -457,8 +457,8 @@ SLIDER
 450
 265
 483
-direct-infection-probability
-direct-infection-probability
+direct-infection-prob
+direct-infection-prob
 0
 1
 0.33
@@ -472,8 +472,8 @@ SLIDER
 400
 265
 433
-patch-infection-probability
-patch-infection-probability
+patch-infection-prob
+patch-infection-prob
 0
 1
 0.33
@@ -535,8 +535,8 @@ SLIDER
 350
 265
 383
-indirect-infection-probability
-indirect-infection-probability
+indirect-infection-prob
+indirect-infection-prob
 0
 1
 1.0
@@ -586,7 +586,7 @@ The parameters for controlling the model are divided into three sections.
 
 In the setup section one can fix the population (slider *population*), percentage of patches which are considered as unavailable for agents (slider *init-obstacles-ratio*), as well as initial percentage of contaminated patches (slider *init-contamination-ratio*) and the initial number of infected agents (slider *init-infected-ratio*).
 
-The second section - *Probabilities of the channels* - includes parameter of the opinion (or virus) spread. Slider *direct-infection-probability*, *indirect-infection-probability*, and *patch-infection-probability* can be used to change the probabilities of getting infected during the direct contact, the indirect contact, and via contact with a contaminated patch, respectively. The values of these probabilities are set independently.
+The second section - *Probabilities of the channels* - includes parameter of the opinion (or virus) spread. Slider *direct-infection-prob*, *indirect-infection-prob*, and *patch-infection-prob* can be used to change the probabilities of getting infected during the direct contact, the indirect contact, and via contact with a contaminated patch, respectively. The values of these probabilities are set independently.
 
 The third section - *Parameters of agents and patches* - included parameters controling healing and mobility. In particular,
 
