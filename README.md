@@ -8,8 +8,10 @@ model based on the three channels of virus propagation.
 ## Files
 
 The repository contains the following files:
-  - `v3w.netlogo` - model in NetLogo (version 6.2.1)
-  - `expName-expDesc.sh` - files for running headless NetLogo experiment,
+  - `v3w.netlogo` - model in NetLogo (tested with version 6.2.1)
+  - `run.sh` - cotroller for running the experiements, it will run the apopriate
+    experiements from `experiments.xml` (see below,
+  - `expName-expDesc.sh` - symbolink links for running headless NetLogo experiments,
   - `expName.csv` - files with data obtained from *expName* experiment, created after running
     the experiment
   - `expName-*.py` - plotter files for data from *expName*, which might be based on data
@@ -19,9 +21,11 @@ The repository contains the following files:
   - All experiments were executed on Linux machines (Ubuntu 20.04 or 22.04),
   - To run scripts controlling the experiments `netlogo-headless.sh` must be in
     your $PATH.
-  - Model can be also obtained from Modeling Commons at 
-http://www.modelingcommons.org/browse/one_model/6946
+  - Model can be also obtained from Modeling Commons at http://www.modelingcommons.org/browse/one_model/6946
+
 ## Experiments
+
+All experiements are stored in `experiements.xml` file.
 
 ### **exp1** and **exp2**
 
