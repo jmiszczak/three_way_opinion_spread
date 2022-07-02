@@ -18,8 +18,8 @@ def mav(x, w=100):
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_1_desc = 'v3w-exp5'
-exp_2_desc = 'v3w-exp6'
+exp_1_desc = 'exp5-realization_non-eq_weights'
+exp_2_desc = 'exp6-realization_non-eq_weights'
 exp_desc = 'v3w-exp5-6'
 
 df_1 = pd.read_csv(exp_1_desc + '.csv', header=6)
