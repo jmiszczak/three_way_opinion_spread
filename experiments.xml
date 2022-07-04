@@ -196,9 +196,7 @@
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
-    </enumeratedValueSet>    <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.25"/>
-    </enumeratedValueSet>
+    </enumeratedValueSet>    
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
@@ -238,9 +236,8 @@
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
-    </enumeratedValueSet>    <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.25"/>
-    </enumeratedValueSet>
+    </enumeratedValueSet>    
+
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
