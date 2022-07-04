@@ -19,11 +19,15 @@ def mav(x, w=100):
 # Note: header=6 is for NetLogo data
 
 exp_1_desc = 'exp5-realization_non-eq_weights'
-exp_2_desc = 'exp6-realization_non-eq_weights'
+# exp_2_desc = 'exp6-realization_non-eq_weights'
+exp_3_desc = 'exp6a-realization_non-eq_weights'
+exp_4_desc = 'exp6b-realization_non-eq_weights'
 exp_desc = 'v3w-exp5-6'
 
 df_1 = pd.read_csv(exp_1_desc + '.csv', header=6)
-df_2 = pd.read_csv(exp_2_desc + '.csv', header=6)
+# df_2 = pd.read_csv(exp_2_desc + '.csv', header=6)
+df_3 = pd.read_csv(exp_3_desc + '.csv', header=6)
+df_4 = pd.read_csv(exp_4_desc + '.csv', header=6)
 # %%
 # select variables for the analysis 
 # this depends on the experiment
@@ -44,7 +48,7 @@ vl = [r'$\lambda_c$', 'step', 'percentage of infected']
 # mrs = [0.1, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.6, 0.75, 0.9, 1]
 # var0s = [0, 0.03, 0.07, 0.1, 0.15, 0.2, 0.3, 0.45, 0.5]
 # var0s = [0, 0.02, 0.03, 0.07, 0.12, 0.15]
-var0s = [0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.15]
+var0s = [0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.15, 0.50]
 
 # %%
 
@@ -54,13 +58,17 @@ skip = 200
 for i, v0 in enumerate(var0s):
     axs = fig.add_subplot(331 + i);
     plot_data_1 = df_1[df_1[v[0]] == v0][[v[1], v[2]]].to_numpy()
-    plot_data_2 = df_2[df_2[v[0]] == v0][[v[1], v[2]]].to_numpy()
+    # plot_data_2 = df_2[df_2[v[0]] == v0][[v[1], v[2]]].to_numpy()
+    plot_data_3 = df_3[df_3[v[0]] == v0][[v[1], v[2]]].to_numpy()
+    plot_data_4 = df_4[df_4[v[0]] == v0][[v[1], v[2]]].to_numpy()
 
     axs.plot(mav(plot_data_1.T[1]), color='black', linestyle='--', lw=0.75)
-    axs.plot(mav(plot_data_2.T[1]), color='green', linestyle='-', lw=0.75)
+    # axs.plot(mav(plot_data_2.T[1]), color='green', linestyle='-', lw=0.75)
+    axs.plot(mav(plot_data_3.T[1]), color='blue', linestyle='-.', lw=0.75)
+    axs.plot(mav(plot_data_4.T[1]), color='green', linestyle='-', lw=0.75)
 
-    axs.set_ylim([0, 100])
-    axs.set_xlim([0, 10000])
+    axs.set_ylim([-5, 100])
+    axs.set_xlim([-200, 10000])
     axs.set_xticks([0, 3500, 7000, 10000])
     axs.set_yticks([0, 25, 50, 75, 100])
     axs.set_title(vl[0] + "={:.2f}".format(v0))
