@@ -14,7 +14,7 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_desc = 'v3w-exp1'
+exp_desc = 'exp1-mobility-patch_cont-patch_infect'
 
 data = pd.read_csv(exp_desc + '.csv', header=6)
 
@@ -29,14 +29,14 @@ data = pd.read_csv(exp_desc + '.csv', header=6)
 # variant 1
 # v = ['mobility-prob', 'patch-infection-weight', 'patch-contamination-prob','mean-infected']
 # variant 2
-v = ['patch-infection-weight', 'mobility-prob', 'patch-contamination-prob', 'mean-infected']
-vl = [r'$w_3$', 'mobility', 'patch contamination probability']
+v = ['patch-infection-prob', 'mobility-prob', 'patch-contamination-prob', 'mean-infected']
+vl = [r'$\nu^{c3}$', 'mobility', 'patch contamination probability']
 
 # selection for plotting
 
 # selected values of the 1st variable
 # var0s = [0.05, 0.1, 0.15, 0.3, 0.4, 0.5, 0.55, 0.65, 0.75]
-var0s = [0, 0.05, 0.1, 0.15, 0.25, 0.4, 0.50, 0.65, 0.75]
+var0s = [0.0, 0.05, 0.1, 0.15, 0.25, 0.3, 0.45, 0.6, 0.75]
 
 # all values for 2nd dna 3rd variable
 var1s = data[v[1]].unique()
@@ -60,7 +60,7 @@ for v0 in var0s:
 # %%
 
 fig = mpl.figure.Figure(figsize=(6, 5.5))
-levels = [1, 10, 20, 30, 40, 50, 60, 70]
+levels = [1, 10, 20, 30, 40, 50, 60, 70, 80]
 
 for i, v0 in enumerate(var0s):
     axs = fig.add_subplot(331 + i);
