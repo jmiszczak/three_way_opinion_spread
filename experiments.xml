@@ -437,9 +437,9 @@
       <value value="10"/>
     </enumeratedValueSet>
     
-    <steppedValueSet variable="direct-infection-prob" first="0" step="0.05" last="0.5">
-    <steppedValueSet variable="indirect-infection-prob" first="0" step="0.05" last="0.5">
-    <steppedValueSet variable="patch-infection-prob" first="0" step="0.05" last="0.5">
+    <steppedValueSet variable="direct-infection-prob" first="0" step="0.05" last="0.5"/>
+    <steppedValueSet variable="indirect-infection-prob" first="0" step="0.05" last="0.5"/>
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.05" last="0.5"/>
     <steppedValueSet variable="patch-heal-prob" first="0" step="0.01" last="0.2"/>
     
         
