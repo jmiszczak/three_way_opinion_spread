@@ -14,7 +14,7 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_desc = 'v3w-exp1x'
+exp_desc = 'exp2x-mobility-patch_cont-patch_infect'
 
 data = pd.read_csv(exp_desc + '.csv', header=6)
 
@@ -29,7 +29,7 @@ data = pd.read_csv(exp_desc + '.csv', header=6)
 # variant 1
 # v = ['mobility-prob', 'patch-infection-weight', 'patch-contamination-prob','mean-infected']
 # variant 2
-v = ['patch-infection-weight', 'mobility-prob', 'patch-contamination-prob', 'mean-infected']
+v = ['patch-infection-prob', 'mobility-prob', 'patch-contamination-prob', 'mean-infected']
 vl = [r'$w_3$', r'$\mu$', r'$p^{patch}$']
 
 # selection for plotting

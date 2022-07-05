@@ -32,7 +32,7 @@ data2 = pd.read_csv(exp2_desc + '.csv', header=6)
 # variant 1
 # v = ['mobility-prob', 'patch-infection-weight', 'patch-contamination-prob','mean-infected']
 # variant 2
-v = ['patch-infection-weight', 'mobility-prob', 'patch-contamination-prob','mean-infected']
+v = ['patch-infection-prob', 'mobility-prob', 'patch-contamination-prob','mean-infected']
 vl = [r'$w_3$', r'$\mu$', r'$p^{\mathrm{patch}}$']
 
 # selection for plotting
