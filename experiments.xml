@@ -418,19 +418,17 @@
     </enumeratedValueSet>
   </experiment>
   
-  <!-- exp7-realization_diff_healing -->
-  <experiment name="exp6a-realization_non-eq_weights" repetitions="20" runMetricsEveryStep="true">
+  <!-- exp7-realizations -->
+  <experiment name="exp7-realizations" repetitions="20" runMetricsEveryStep="true">
     <setup>setup</setup>
     <go>go</go>
-    <timeLimit steps="10000"/>
+    <timeLimit steps="3000"/>
     <metric>%infected</metric>
     <enumeratedValueSet variable="mobility-prob">
       <value value="0.5"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="agent-healing-prob">
-      <value value="0.10"/>
       <value value="0.15"/>
-      <value value="0.20"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="init-contamination-ratio">
       <value value="10"/>
@@ -438,19 +436,17 @@
     <enumeratedValueSet variable="init-obstacles-ratio">
       <value value="10"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="direct-infection-prob">
-      <value value="0.66"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="indirect-infection-prob">
-      <value value="0.66"/>
-    </enumeratedValueSet>
-    <enumeratedValueSet variable="patch-infection-prob">
-      <value value="0"/>
-    </enumeratedValueSet>
+    
+    <steppedValueSet variable="direct-infection-prob" first="0" step="0.05" last="0.5">
+    <steppedValueSet variable="indirect-infection-prob" first="0" step="0.05" last="0.5">
+    <steppedValueSet variable="patch-infection-prob" first="0" step="0.05" last="0.5">
+    <steppedValueSet variable="patch-heal-prob" first="0" step="0.01" last="0.2"/>
+    
+        
     <enumeratedValueSet variable="patch-contamination-prob">
       <value value="0.15"/>
     </enumeratedValueSet>
-    <steppedValueSet variable="patch-heal-prob" first="0" step="0.01" last="0.5"/>
+    
     <enumeratedValueSet variable="population">
       <value value="250"/>
     </enumeratedValueSet>
