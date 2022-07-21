@@ -14,8 +14,8 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp1_desc = 'v3w-exp1x'
-exp2_desc = 'v3w-exp2x'
+exp1_desc = 'exp1-mobility-patch_cont-patch_infect'
+exp2_desc = 'exp2x-mobility-patch_cont-patch_infect'
 exp_desc = 'v3w_exp1x2x'
 
 data1 = pd.read_csv(exp1_desc + '.csv', header=6)

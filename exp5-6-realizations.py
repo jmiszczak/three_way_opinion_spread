@@ -40,7 +40,7 @@ df_4 = pd.read_csv(exp_4_desc + '.csv', header=6)
 # v = ['mobility-prob', 'patch-infection-weight', 'patch-contamination-prob','mean-infected']
 # variant 2
 v = ['patch-heal-prob', '[step]', '%infected']
-vl = [r'$\lambda_c$', 'step', 'percentage of infected']
+vl = [r'$\delta_c$', 'step', 'percentage of infected']
 
 # selection for plotting
 

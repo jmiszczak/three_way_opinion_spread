@@ -30,13 +30,12 @@ data = pd.read_csv(exp_desc + '.csv', header=6)
 # v = ['mobility-prob', 'patch-infection-weight', 'patch-contamination-prob','mean-infected']
 # variant 2
 v = ['patch-infection-prob', 'mobility-prob', 'patch-contamination-prob', 'mean-infected']
-vl = [r'$\nu^{c3}$', 'mobility', 'patch contamination probability']
+vl = [r'$\nu_{3}$', 'mobility', 'patch contamination probability']
 
 # selection for plotting
 
 # selected values of the 1st variable
-# var0s = [0.05, 0.1, 0.15, 0.3, 0.4, 0.5, 0.55, 0.65, 0.75]
-var0s = [0.0, 0.05, 0.1, 0.15, 0.25, 0.3, 0.45, 0.6, 0.75]
+var0s = [0.05, 0.10, 0.15, 0.25, 0.30, 0.45, 0.55, 0.65, 0.75]
 
 # all values for 2nd dna 3rd variable
 var1s = data[v[1]].unique()
