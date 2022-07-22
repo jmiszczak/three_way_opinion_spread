@@ -35,9 +35,10 @@ vl = [r'$\nu_{3}$', 'mobility', 'patch contamination probability']
 # selection for plotting
 
 # selected values of the 1st variable
+# var0s = [0.05, 0.1, 0.15, 0.3, 0.4, 0.5, 0.55, 0.65, 0.75]
 var0s = [0.05, 0.10, 0.15, 0.25, 0.30, 0.45, 0.55, 0.65, 0.75]
 
-# all values for 2nd dna 3rd variable
+# all values for 2nd and 3rd variable
 var1s = data[v[1]].unique()
 var2s = data[v[2]].unique()
 
@@ -79,7 +80,7 @@ for i, v0 in enumerate(var0s):
         plot_data.T[2].reshape(21, 21),
         levels=levels,
         cmap = 'Oranges',
-        norm = colors.Normalize(vmin=0, vmax=70),
+        norm = colors.Normalize(vmin=0, vmax=levels[-1]),
     )
 
     axs.set_title('abcdefghi'[i] + ') ' + vl[0] + '=' + str(v0))
