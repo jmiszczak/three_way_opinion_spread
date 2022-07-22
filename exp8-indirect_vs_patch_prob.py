@@ -89,7 +89,7 @@ for i, v0 in enumerate(var0s):
         norm = colors.Normalize(vmin=0, vmax=levels[-1]),
     )
 
-    axs.set_title('abcdefghi'[i] + ') ' + vl[0] + '=' + str(v0) +', ' + vl[1] + '=' + str(v1))
+    axs.set_title('abcdefghi'[i+3*j] + ') ' + vl[0] + '=' + str(v0) +', ' + vl[1] + '=' + str(v1))
     axs.set_xticks(np.arange(0, 1.01, 0.2))
 
     axs.grid(True, linestyle=':', linewidth=0.5, c='k')
