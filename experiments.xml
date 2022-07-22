@@ -457,10 +457,10 @@
   
   
   <!-- exp8-indirect_vs_patch_prob -->
-  <experiment name="exp8-indirect_vs_patch_prob" repetitions="50" runMetricsEveryStep="false">
+  <experiment name="exp8-indirect_vs_patch_prob" repetitions="10" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <timeLimit steps="5000"/>
+    <timeLimit steps="500"/>
     <metric>%infected</metric>
     
     <enumeratedValueSet variable="agent-healing-prob">
