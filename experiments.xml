@@ -2,7 +2,7 @@
 <!DOCTYPE experiments SYSTEM "behaviorspace.dtd">
 <experiments>
   <!-- exp1-mobility-patch_cont-patch_infect -->
-  <experiment name="exp1-mobility-patch_cont-patch_infect" repetitions="50" runMetricsEveryStep="false">
+  <experiment name="exp1-mobility-patch_cont-patch_infect" repetitions="100" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <timeLimit steps="5000"/>
@@ -457,7 +457,7 @@
   
   
   <!-- exp8-indirect_vs_patch_prob -->
-  <experiment name="exp8-indirect_vs_patch_prob" repetitions="50" runMetricsEveryStep="false">
+  <experiment name="exp8-indirect_vs_patch_prob" repetitions="100" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <timeLimit steps="5000"/>
