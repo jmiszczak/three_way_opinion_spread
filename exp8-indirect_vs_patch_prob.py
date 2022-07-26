@@ -77,7 +77,7 @@ for i, v0 in enumerate(var0s):
         plot_data.T[1].reshape(len(var3s), len(var3s)),
         plot_data.T[2].reshape(21, 21),
         levels=levels,
-        colors='k', linestyles='dotted'
+        colors='k', linestyles='dotted', linewidths=0.5
     )
 
     im = axs.contourf(
@@ -85,11 +85,11 @@ for i, v0 in enumerate(var0s):
         plot_data.T[1].reshape(len(var3s), len(var3s)),
         plot_data.T[2].reshape(21, 21),
         levels=levels,
-        cmap = 'Oranges',
+        cmap = 'hot_r',
         norm = colors.Normalize(vmin=0, vmax=levels[-1]),
     )
 
-    axs.set_title('abcdefghi'[i] + ') ' + vl[0] + '=' + str(v0) +', ' + vl[1] + '=' + str(v1))
+    axs.set_title('abcdefghi'[i+3*j] + ') ' + vl[0] + '=' + str(v0) +', ' + vl[1] + '=' + str(v1))
     axs.set_xticks(np.arange(0, 1.01, 0.2))
 
     axs.grid(True, linestyle=':', linewidth=0.5, c='k')
