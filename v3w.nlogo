@@ -252,10 +252,10 @@ ticks
 10.0
 
 BUTTON
-13
-16
-183
-49
+15
+20
+185
+53
 Setup
 setup
 NIL
@@ -400,7 +400,7 @@ mobility-prob
 mobility-prob
 0
 1
-0.5
+1.0
 0.01
 1
 NIL
@@ -415,16 +415,16 @@ patch-contamination-prob
 patch-contamination-prob
 0
 1
-0.15
+0.25
 0.01
 1
 NIL
 HORIZONTAL
 
 TEXTBOX
-25
+20
 325
-270
+265
 356
 Probabilities for the channels
 14
@@ -453,30 +453,30 @@ Parameters of agents and patches
 1
 
 SLIDER
-15
-450
-265
-483
+20
+350
+270
+383
 direct-infection-prob
 direct-infection-prob
 0
 1
-0.33
+0.5
 0.01
 1
 NIL
 HORIZONTAL
 
 SLIDER
-15
-400
-265
-433
+20
+450
+270
+483
 patch-infection-prob
 patch-infection-prob
 0
 1
-0.33
+0.0
 0.01
 1
 NIL
@@ -506,7 +506,7 @@ patch-heal-prob
 patch-heal-prob
 0
 1
-0.39
+0.05
 0.01
 1
 NIL
@@ -531,15 +531,15 @@ PENS
 "<sick time>" 1.0 0 -8053223 true "" "plot mean-sick-time"
 
 SLIDER
-15
-350
-265
-383
+20
+400
+270
+433
 indirect-infection-prob
 indirect-infection-prob
 0
 1
-1.0
+0.25
 0.01
 1
 NIL
