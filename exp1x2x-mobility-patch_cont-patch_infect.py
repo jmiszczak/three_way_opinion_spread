@@ -175,4 +175,6 @@ fig.tight_layout()
 display(fig)
 
 #%%
-fig.savefig("plot_"+ exp_desc +".pdf", format="pdf", bbox_inches = 'tight')
+fName = "plot_" + exp_desc + ".pdf"
+print("INFO] Saving " + fName)
+fig.savefig(fName, format="pdf", bbox_inches='tight')
