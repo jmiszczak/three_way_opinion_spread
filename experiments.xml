@@ -508,7 +508,7 @@
 
 
   <!-- exp9-mobility-patch_cont-patch_infect (variant of exp1) -->
-  <experiment name="exp9-mobility-patch_cont-patch_infect" repetitions="100" runMetricsEveryStep="false">
+  <experiment name="exp9-mobility-patch_cont-patch_infect" repetitions="50" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
     <timeLimit steps="5000"/>
