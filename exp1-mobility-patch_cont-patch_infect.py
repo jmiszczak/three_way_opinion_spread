@@ -14,7 +14,7 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_desc = 'exp1-mobility-patch_cont-patch_infect'
+exp_desc = 'exp9-mobility-patch_cont-patch_infect'
 
 data = pd.read_csv(exp_desc + '.csv', header=6)
 
@@ -36,7 +36,7 @@ vl = [r'$\nu_{3}$', 'mobility', 'patch contamination probability']
 
 # selected values of the 1st variable
 # var0s = [0.05, 0.1, 0.15, 0.3, 0.4, 0.5, 0.55, 0.65, 0.75]
-var0s = [0.05, 0.10, 0.15, 0.25, 0.30, 0.45, 0.55, 0.65, 0.75]
+var0s = [0.0, 0.05, 0.10, 0.15, 0.25, 0.30, 0.45, 0.55, 0.60]
 
 # all values for 2nd and 3rd variable
 var1s = data[v[1]].unique()
@@ -60,7 +60,7 @@ for v0 in var0s:
 # %%
 
 fig = mpl.figure.Figure(figsize=(6, 5.5))
-levels = [1, 10, 20, 30, 40, 50, 60, 70, 80]
+levels = [1, 10, 20, 30, 40, 50, 60, 70, 80, 90]
 
 for i, v0 in enumerate(var0s):
     axs = fig.add_subplot(331 + i);
@@ -71,7 +71,7 @@ for i, v0 in enumerate(var0s):
         plot_data.T[1].reshape(len(var2s), len(var2s)),
         plot_data.T[2].reshape(21, 21),
         levels=levels,
-        colors='k', linestyles='dotted'
+        colors='k', linestyles='dotted', linewidths=0.5
     )
 
     im = axs.contourf(
@@ -79,7 +79,7 @@ for i, v0 in enumerate(var0s):
         plot_data.T[1].reshape(len(var2s), len(var2s)),
         plot_data.T[2].reshape(21, 21),
         levels=levels,
-        cmap = 'Oranges',
+        cmap = 'hot_r',
         norm = colors.Normalize(vmin=0, vmax=levels[-1]),
     )
 
@@ -107,4 +107,6 @@ fig.tight_layout()
 display(fig)
 
 # %%
-fig.savefig("plot_" + exp_desc + ".pdf", format="pdf", bbox_inches='tight')
+fName = "plot_" + exp_desc + ".pdf"
+print("INFO] Saving " + fName)
+fig.savefig(fName, format="pdf", bbox_inches='tight')
