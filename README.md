@@ -11,7 +11,7 @@ The repository contains the following files:
   - `v3w.netlogo` - model in NetLogo (tested with version 6.2.1)
   - `run.sh` - cotroller for running the experiements, it will run the apopriate
     experiements from `experiments.xml` (see below,
-  - `expName-expDesc.sh` - symbolink links for running headless NetLogo experiments,
+  - `make_links.sh` - script for creating symbolik links for running headless NetLogo experiments,
   - `expName.csv` - files with data obtained from *expName* experiment, created after running
     the experiment
   - `expName-*.py` - plotter files for data from *expName*, which might be based on data
@@ -23,47 +23,11 @@ The repository contains the following files:
     your $PATH.
   - Model can be also obtained from Modeling Commons at http://www.modelingcommons.org/browse/one_model/6946
 
-## Experiments
+## How to run the code?
 
-All experiements are stored in `experiements.xml` file.
+To run one of the experiements described in `experiements.xml`, execute
+`make_links.sh` script. It will result in a number of symbolic links,
+corresponding to the sections of XML file describing the experiments. Running
+any of the scripts will start the corresponding experiement,  eg.
 
-### **exp1** and **exp2**
-
-**Goal**: Observer the dynamics of infection/opinion for selection of mobility
-and patch contamination probabilities.
-
-Experiments **exp1x** and **exp2x** have different patch healing probability
-comparing to **exp1** and **exp2**.
-
-  - Description: interplay between mobility, patch contamination, and patch infection weight.
-  - Time limit: 5000
-  - Repetitions: 50
-  - World:
-     - population: 250,
-     - grid: 33x33, 
-     - obstacles: 10% of the grid, 
-     - initial contamination: 10% of the grid, 
-     - initially infected agents: 5% of the population, 
-     - direct infection weight: 0.25
-     - indirect infection: w_2 = 1-(w_1+w_3)
-  - Healing params (healing with some p at each step)
-    - healing prob for agent: 0.25, 
-    - healing prob for patch 0.05
-  - Variables: 
-    - mobility (0..1), 
-    - patch contamination (0..1),
-    - patch infection weight (0..1),
-  - Reporters: 
-    - %infected, 
-
-
-### **exp3**, **exp4**, **exp5**, and **exp6**
-
-**Goal**: Provide examples of opinion dynamics with various scenarios of the
-weights assignments.
-
-  - **exp3**: w1=w2=w3=1/3
-  - **exp4**: w1=w2=1/4, w3=1/2
-  - **exp5**: w1=2/3, w2=2. w3=1/3
-  - **exp6**: w1=2/3, w2=1/3, w3=0
-  
+  ./exp7-realizations.sh
