@@ -14,7 +14,7 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_desc = 'exp8-indirect_vs_patch_prob'
+exp_desc = 'exp2-indirect_vs_patch_prob'
 
 data = pd.read_csv(exp_desc + '.csv', header=6)
 

@@ -14,7 +14,7 @@ mpl.rc('font', size=10)
 # file with data from the experiment
 # Note: header=6 is for NetLogo data
 
-exp_desc = 'exp9-mobility-patch_cont-patch_infect'
+exp_desc = 'exp1-mobility-patch_cont-patch_infect'
 
 data = pd.read_csv(exp_desc + '.csv', header=6)
 
@@ -85,6 +85,7 @@ for i, v0 in enumerate(var0s):
 
     axs.set_title('abcdefghi'[i] + ') ' + vl[0] + '=' + str(v0))
     axs.set_xticks(np.arange(0, 1.01, 0.2))
+    axs.set_yticks(np.arange(0, 1.01, 0.2))
 
     axs.grid(True, linestyle=':', linewidth=0.5, c='k')
 
