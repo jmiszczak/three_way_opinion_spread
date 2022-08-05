@@ -30,4 +30,4 @@ To run one of the experiements described in `experiements.xml`, execute
 corresponding to the sections of XML file describing the experiments. Running
 any of the scripts will start the corresponding experiement,  eg.
 
-  ./exp7-realizations.sh
+  ```./exp7-realizations.sh```
