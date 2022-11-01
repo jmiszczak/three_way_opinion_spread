@@ -3,6 +3,10 @@
 </a>
 
 
+
+[![DOI](https://zenodo.org/badge/465858115.svg)](https://zenodo.org/badge/latestdoi/465858115)
+
+
 # three_way_opinion_spread
 
 Implementation and description of experiments for three-way opinion spread
