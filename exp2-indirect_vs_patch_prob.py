@@ -114,6 +114,6 @@ display(fig)
 
 
 # %%
-fName = "plot_" + exp_desc + ".pdf"
+fName = "plot_" + exp_desc + "_all.pdf"
 print("INFO] Saving " + fName)
-fig.savefig(fName, format="pdf", bbox_inches='tight')
+fig.savefig('plots/'+fName, format="pdf", bbox_inches='tight')
