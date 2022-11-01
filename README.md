@@ -1,4 +1,7 @@
-[![Open Code Badge](https://www.comses.net/static/images/icons/open-code-badge.png)](https://www.comses.net/codebases/42c95a84-ca79-4d71-91e0-12ac436e9673/releases/1.0.0/)
+<a href="https://www.comses.net/codebases/42c95a84-ca79-4d71-91e0-12ac436e9673/releases/1.1.0/">
+  <img height="100" src="https://www.comses.net/static/images/icons/open-code-badge.png" alt="Open Code Badge">
+</a>
+
 
 # three_way_opinion_spread
 
