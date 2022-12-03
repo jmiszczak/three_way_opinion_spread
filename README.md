@@ -38,3 +38,23 @@ corresponding to the sections of XML file describing the experiments. Running
 any of the scripts will start the corresponding experiement,  eg.
 
   ```./exp7-realizations.sh```
+
+## Publication
+
+The presented esults were published in
+
+K. Domino, J.A. Miszczak, *Will you infect me with your opinion?*,
+Physica A: Statistical Mechanics and its Applications
+Vol. 608 (2022), 128289 DOI:[10.1016/j.physa.2022.128289](https://doi.org/10.1016/j.physa.2022.128289) arXiv:[2208.13426](https://arxiv.org/abs/2208.13426)
+
+```
+@article{domino2022will,
+  title = {Will you infect me with your opinion?},
+  author = {Domino, Krzysztof and Miszczak, Jaroslaw Adam},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  pages = {128289},
+  year = {2022},
+  doi = {10.1016/j.physa.2022.128289}
+}
+
+```
