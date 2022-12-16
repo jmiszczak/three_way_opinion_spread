@@ -71,7 +71,7 @@ for i, v0 in enumerate(var0s):
     axs.set_xlim([-200, 10000])
     axs.set_xticks([0, 3500, 7000, 10000])
     axs.set_yticks([0, 25, 50, 75, 100])
-    axs.set_title(vl[0] + "={:.2f}".format(v0))
+    axs.set_title('abcdefghi'[i] + ') ' + vl[0] + "={:.2f}".format(v0))
     axs.grid(True, linestyle=':', linewidth=0.5, c='k')
 
     if i not in [6, 7, 8]:
@@ -90,4 +90,6 @@ fig.tight_layout()
 display(fig)
 
 # %%
-fig.savefig("plot_" + exp_desc + ".pdf", format="pdf", bbox_inches='tight')
+fName = "plot_" + exp_desc + ".pdf"
+print("INFO] Saving " + fName)
+fig.savefig(fName, format="pdf", bbox_inches='tight')
