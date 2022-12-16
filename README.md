@@ -41,7 +41,7 @@ any of the scripts will start the corresponding experiement,  eg.
 
 ## Publication
 
-The presented esults were published in
+The presented results were published in
 
 K. Domino, J.A. Miszczak, *Will you infect me with your opinion?*,
 Physica A: Statistical Mechanics and its Applications
